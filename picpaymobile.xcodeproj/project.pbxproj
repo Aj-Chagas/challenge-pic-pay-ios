@@ -7,23 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B429901D245C79BE008755F9 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = B429901C245C79BE008755F9 /* users.json */; };
+		B4299021245C7FC8008755F9 /* DecodeJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4299020245C7FC8008755F9 /* DecodeJson.swift */; };
+		B4299023245C85BA008755F9 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4299022245C85BA008755F9 /* AppConstants.swift */; };
+		B4299026245C8AC6008755F9 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4299024245C8AC6008755F9 /* UserCell.swift */; };
+		B4299027245C8AC6008755F9 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4299025245C8AC6008755F9 /* UserCell.xib */; };
+		B43111F6245DDC6000270C5D /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43111F5245DDC6000270C5D /* UIImageView.swift */; };
 		B486B7FB245BA8210071C10C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B486B7FA245BA8210071C10C /* AppDelegate.swift */; };
 		B486B7FD245BA8210071C10C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B486B7FC245BA8210071C10C /* SceneDelegate.swift */; };
-		B486B7FF245BA8210071C10C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B486B7FE245BA8210071C10C /* ViewController.swift */; };
+		B486B7FF245BA8210071C10C /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B486B7FE245BA8210071C10C /* UserListViewController.swift */; };
 		B486B802245BA8220071C10C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B486B800245BA8220071C10C /* Main.storyboard */; };
 		B486B804245BA8270071C10C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B486B803245BA8270071C10C /* Assets.xcassets */; };
 		B486B807245BA8270071C10C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B486B805245BA8270071C10C /* LaunchScreen.storyboard */; };
+		B4F56D06245BB8E100F8EB53 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F56D05245BB8E100F8EB53 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B429901C245C79BE008755F9 /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		B4299020245C7FC8008755F9 /* DecodeJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeJson.swift; sourceTree = "<group>"; };
+		B4299022245C85BA008755F9 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		B4299024245C8AC6008755F9 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		B4299025245C8AC6008755F9 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		B43111F5245DDC6000270C5D /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		B486B7F7245BA8210071C10C /* picpaymobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = picpaymobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B486B7FA245BA8210071C10C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B486B7FC245BA8210071C10C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B486B7FE245BA8210071C10C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B486B7FE245BA8210071C10C /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		B486B801245BA8220071C10C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B486B803245BA8270071C10C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B486B806245BA8270071C10C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B486B808245BA8270071C10C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4F56D05245BB8E100F8EB53 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +51,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B429901B245C7994008755F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4299025245C8AC6008755F9 /* UserCell.xib */,
+				B486B805245BA8270071C10C /* LaunchScreen.storyboard */,
+				B486B800245BA8220071C10C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B429901E245C79DD008755F9 /* Row */ = {
+			isa = PBXGroup;
+			children = (
+				B429901C245C79BE008755F9 /* users.json */,
+			);
+			path = Row;
+			sourceTree = "<group>";
+		};
+		B429901F245C7F9E008755F9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B4299020245C7FC8008755F9 /* DecodeJson.swift */,
+				B43111F5245DDC6000270C5D /* UIImageView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B486B7EE245BA8210071C10C = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +97,35 @@
 		B486B7F9245BA8210071C10C /* picpaymobile */ = {
 			isa = PBXGroup;
 			children = (
+				B486B808245BA8270071C10C /* Info.plist */,
+				B4299022245C85BA008755F9 /* AppConstants.swift */,
 				B486B7FA245BA8210071C10C /* AppDelegate.swift */,
 				B486B7FC245BA8210071C10C /* SceneDelegate.swift */,
-				B486B7FE245BA8210071C10C /* ViewController.swift */,
-				B486B800245BA8220071C10C /* Main.storyboard */,
 				B486B803245BA8270071C10C /* Assets.xcassets */,
-				B486B805245BA8270071C10C /* LaunchScreen.storyboard */,
-				B486B808245BA8270071C10C /* Info.plist */,
+				B4F56D03245BB8C000F8EB53 /* Controller */,
+				B429901F245C7F9E008755F9 /* Extensions */,
+				B4F56D04245BB8CA00F8EB53 /* Model */,
+				B429901E245C79DD008755F9 /* Row */,
+				B429901B245C7994008755F9 /* View */,
 			);
 			path = picpaymobile;
+			sourceTree = "<group>";
+		};
+		B4F56D03245BB8C000F8EB53 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B486B7FE245BA8210071C10C /* UserListViewController.swift */,
+				B4299024245C8AC6008755F9 /* UserCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4F56D04245BB8CA00F8EB53 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B4F56D05245BB8E100F8EB53 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +186,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4299027245C8AC6008755F9 /* UserCell.xib in Resources */,
+				B429901D245C79BE008755F9 /* users.json in Resources */,
 				B486B807245BA8270071C10C /* LaunchScreen.storyboard in Resources */,
 				B486B804245BA8270071C10C /* Assets.xcassets in Resources */,
 				B486B802245BA8220071C10C /* Main.storyboard in Resources */,
@@ -138,8 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B486B7FF245BA8210071C10C /* ViewController.swift in Sources */,
+				B43111F6245DDC6000270C5D /* UIImageView.swift in Sources */,
+				B4F56D06245BB8E100F8EB53 /* User.swift in Sources */,
+				B4299023245C85BA008755F9 /* AppConstants.swift in Sources */,
+				B486B7FF245BA8210071C10C /* UserListViewController.swift in Sources */,
 				B486B7FB245BA8210071C10C /* AppDelegate.swift in Sources */,
+				B4299026245C8AC6008755F9 /* UserCell.swift in Sources */,
+				B4299021245C7FC8008755F9 /* DecodeJson.swift in Sources */,
 				B486B7FD245BA8210071C10C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
