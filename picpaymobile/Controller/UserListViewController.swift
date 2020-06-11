@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class UserListViewController: UIViewController {
 
@@ -65,24 +66,25 @@ class UserListViewController: UIViewController {
         let users = Bundle.main.decode([User].self, from: AppConstants.UserJsonFile)
         listUsers.append(contentsOf: users)
     }
+    
 }
 
 extension UserListViewController : UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-           searchActive = true
+        searchActive = true
     }
 
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-           searchActive = false
+        searchActive = false
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-           searchActive = false
+        searchActive = false
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-           searchActive = false
+        searchActive = true
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
