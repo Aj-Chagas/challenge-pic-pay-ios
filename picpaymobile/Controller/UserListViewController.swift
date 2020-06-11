@@ -17,6 +17,7 @@ class UserListViewController: UIViewController {
     var searchActive : Bool = false
     var listUsers : [User] = []
     var filteredUsers : [User] = []
+    var selectedUser : User? = nil
     
     var isSearchBarEmpty: Bool {
       return searchBar.text?.isEmpty ?? true
@@ -57,6 +58,7 @@ class UserListViewController: UIViewController {
     func configureTableView(){
         tableView.separatorStyle = .none
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(UINib(nibName: AppConstants.cellNibName, bundle: nil), forCellReuseIdentifier: AppConstants.cellIdentifier)
        
         populateTableView()
@@ -67,6 +69,26 @@ class UserListViewController: UIViewController {
         listUsers.append(contentsOf: users)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if (segue.identifier == "registerCreditCardSegue"){
+            guard let regiterCreditCardViewController = segue.destination as? RegisterCreditCardViewController else{
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            regiterCreditCardViewController.user = selectedUser
+        }
+    }
+    
+    func isFiltering(_ indexPath : IndexPath) -> User {
+        var user : User
+        if isFiltering {
+            user = filteredUsers[indexPath.row]
+        } else {
+            user = listUsers[indexPath.row]
+        }
+        return user
+    }
+
 }
 
 extension UserListViewController : UISearchBarDelegate {
@@ -105,13 +127,7 @@ extension UserListViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let user : User
-        
-        if isFiltering {
-            user = filteredUsers[indexPath.row]
-        } else {
-            user = listUsers[indexPath.row]
-        }
+        let user = isFiltering(indexPath)
         
         let cell = tableView.dequeueReusableCell(withIdentifier: AppConstants.cellIdentifier, for: indexPath) as! UserCellTableViewCell
         bindTableView(cell, user)
@@ -127,6 +143,14 @@ extension UserListViewController : UITableViewDataSource {
         cell.userPhoto.load(url: URL(string: user.img)!)
     }
     
+}
+
+extension UserListViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedUser = isFiltering(indexPath)
+        performSegue(withIdentifier: "registerCreditCardSegue", sender: self)
+    }
 }
 
 

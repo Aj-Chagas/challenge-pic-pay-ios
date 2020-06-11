@@ -31,11 +31,28 @@
                                 <color key="backgroundColor" red="0.11372549019607843" green="0.11764705882352941" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="UserPrototypeCell" id="nn1-4l-GlI">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="28" width="374" height="70.333335876464844"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nn1-4l-GlI" id="TJv-Bj-X0C">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="70.333335876464844"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="On4-TG-MiU">
+                                                    <rect key="frame" x="10" y="10.000000000000004" width="354" height="50.333333333333343"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="WLM-FF-buv">
+                                                            <rect key="frame" x="0.0" y="0.3333333333333357" width="354" height="50"/>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" name="PrimaryColor"/>
+                                            <constraints>
+                                                <constraint firstItem="On4-TG-MiU" firstAttribute="top" secondItem="TJv-Bj-X0C" secondAttribute="top" constant="10" id="1Ii-Xc-b6K"/>
+                                                <constraint firstItem="On4-TG-MiU" firstAttribute="leading" secondItem="TJv-Bj-X0C" secondAttribute="leading" constant="10" id="SxO-1w-v0B"/>
+                                                <constraint firstAttribute="bottom" secondItem="On4-TG-MiU" secondAttribute="bottom" constant="10" id="TIj-rf-tau"/>
+                                                <constraint firstAttribute="trailing" secondItem="On4-TG-MiU" secondAttribute="trailing" constant="10" id="rc7-Mb-BTb"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -60,11 +77,12 @@
                     <connections>
                         <outlet property="searchBar" destination="H41-BS-Pbp" id="kJk-ju-ssz"/>
                         <outlet property="tableView" destination="8IS-TC-nkj" id="wmt-dd-l7J"/>
+                        <segue destination="zxE-b9-Oqg" kind="show" identifier="registerCreditCardSegue" id="ZoP-YS-gEk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="661" y="-17"/>
+            <point key="canvasLocation" x="660.86956521739137" y="-17.119565217391305"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pjI-lq-cw4">
@@ -84,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="-123" y="-17"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Credit Card View Controller-->
         <scene sceneID="z9A-Yh-Xy0">
             <objects>
-                <viewController id="zxE-b9-Oqg" sceneMemberID="viewController">
+                <viewController id="zxE-b9-Oqg" customClass="RegisterCreditCardViewController" customModule="picpaymobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WKV-9x-GUt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -13,6 +13,7 @@
 		B4299026245C8AC6008755F9 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4299024245C8AC6008755F9 /* UserCell.swift */; };
 		B4299027245C8AC6008755F9 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4299025245C8AC6008755F9 /* UserCell.xib */; };
 		B43111F6245DDC6000270C5D /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43111F5245DDC6000270C5D /* UIImageView.swift */; };
+		B4438D112491C8EB00DDFB21 /* RegisterCreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4438D102491C8EB00DDFB21 /* RegisterCreditCardViewController.swift */; };
 		B44BDF90248F1D1E004A8C06 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B44BDF8F248F1D1E004A8C06 /* Color.xcassets */; };
 		B44BDF9324906411004A8C06 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44BDF9224906410004A8C06 /* RoundButton.swift */; };
 		B486B7FB245BA8210071C10C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B486B7FA245BA8210071C10C /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 		B4299024245C8AC6008755F9 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		B4299025245C8AC6008755F9 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		B43111F5245DDC6000270C5D /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		B4438D102491C8EB00DDFB21 /* RegisterCreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCreditCardViewController.swift; sourceTree = "<group>"; };
 		B44BDF8F248F1D1E004A8C06 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		B44BDF9224906410004A8C06 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		B486B7F7245BA8210071C10C /* picpaymobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = picpaymobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 			children = (
 				B486B7FE245BA8210071C10C /* UserListViewController.swift */,
 				B4299024245C8AC6008755F9 /* UserCell.swift */,
+				B4438D102491C8EB00DDFB21 /* RegisterCreditCardViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			files = (
 				B44BDF9324906411004A8C06 /* RoundButton.swift in Sources */,
 				B43111F6245DDC6000270C5D /* UIImageView.swift in Sources */,
+				B4438D112491C8EB00DDFB21 /* RegisterCreditCardViewController.swift in Sources */,
 				B4F56D06245BB8E100F8EB53 /* User.swift in Sources */,
 				B4299023245C85BA008755F9 /* AppConstants.swift in Sources */,
 				B486B7FF245BA8210071C10C /* UserListViewController.swift in Sources */,
