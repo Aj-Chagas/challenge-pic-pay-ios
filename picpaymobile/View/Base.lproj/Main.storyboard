@@ -13,22 +13,22 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="UserListViewController" customModule="picpaymobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contatos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vi3-Y1-Yaw">
-                                <rect key="frame" x="20" y="85" width="374" height="43"/>
+                                <rect key="frame" x="20" y="41" width="374" height="43"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="A quem você deseja pagar ?" translatesAutoresizingMaskIntoConstraints="NO" id="H41-BS-Pbp">
-                                <rect key="frame" x="12" y="138" width="390" height="56"/>
+                                <rect key="frame" x="12" y="94" width="390" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8IS-TC-nkj">
-                                <rect key="frame" x="20" y="204" width="374" height="512"/>
-                                <color key="backgroundColor" red="0.11372549019607843" green="0.11764705882352941" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="20" y="160" width="374" height="512"/>
+                                <color key="backgroundColor" name="PrimaryColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="UserPrototypeCell" id="nn1-4l-GlI">
                                         <rect key="frame" x="0.0" y="28" width="374" height="70.333335876464844"/>
@@ -58,7 +58,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.11372549019607843" green="0.11764705882352941" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="PrimaryColor"/>
                         <constraints>
                             <constraint firstItem="8IS-TC-nkj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="3vf-2I-xtz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vi3-Y1-Yaw" secondAttribute="trailing" constant="20" id="BM4-5w-C8X"/>
@@ -89,9 +89,11 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VNN-DY-0uu" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hGJ-He-9og">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="hGJ-He-9og">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="PrimaryColor"/>
+                        <color key="barTintColor" name="PrimaryColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -107,15 +109,16 @@
             <objects>
                 <viewController id="zxE-b9-Oqg" customClass="RegisterCreditCardViewController" customModule="picpaymobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WKV-9x-GUt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ra5-dK-GH4" customClass="RoundButton" customModule="picpaymobile" customModuleProvider="target">
-                                <rect key="frame" x="20" y="668" width="374" height="48"/>
+                                <rect key="frame" x="20" y="624" width="374" height="48"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="LWb-qL-YoG"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Cadastrar cartão">
                                     <color key="titleColor" red="0.93983527420000001" green="0.93983527420000001" blue="0.93983527420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -127,21 +130,24 @@
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Mbf-Pq-eBC" kind="show" id="4Og-EF-bhF"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CeI-d7-veL">
-                                <rect key="frame" x="20" y="239.66666666666666" width="374" height="256.66666666666674"/>
+                                <rect key="frame" x="20" y="217.66666666666666" width="374" height="256.66666666666674"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit_card" translatesAutoresizingMaskIntoConstraints="NO" id="glD-80-oRP">
                                         <rect key="frame" x="112" y="0.0" width="150" height="100"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastre um cartão de crédito" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ea5-26-6OM">
-                                        <rect key="frame" x="52" y="110.00000000000003" width="270.33333333333331" height="75.666666666666657"/>
+                                        <rect key="frame" x="52" y="110" width="270.33333333333331" height="75.666666666666686"/>
                                         <fontDescription key="fontDescription" name="NotoSansKannada-Bold" family="Noto Sans Kannada" pointSize="28"/>
                                         <color key="textColor" red="0.93983527421120738" green="0.93983527421120738" blue="0.93983527421120738" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para fazer pagamentos para outras pessoas você precisa cadastrar um cartão de crédito pessoal." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RT4-d8-rdD">
-                                        <rect key="frame" x="16.333333333333343" y="195.66666666666666" width="341.66666666666663" height="60.999999999999972"/>
+                                        <rect key="frame" x="16.333333333333343" y="195.66666666666663" width="341.66666666666663" height="61"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.93983527420000001" green="0.93983527420000001" blue="0.93983527420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -167,7 +173,39 @@
             </objects>
             <point key="canvasLocation" x="1626" y="-17"/>
         </scene>
+        <!--Register Form View Controller-->
+        <scene sceneID="swi-9V-HbK">
+            <objects>
+                <viewController id="Mbf-Pq-eBC" customClass="RegisterFormViewController" customModule="picpaymobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pEO-BC-Uwo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cadastrar Cartão" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wv-fG-hls">
+                                <rect key="frame" x="66" y="64" width="228" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NotoSansKannada-Bold" family="Noto Sans Kannada" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Número do cartão" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dWA-vK-59B">
+                                <rect key="frame" x="66" y="143" width="262" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" name="PrimaryColor"/>
+                        <viewLayoutGuide key="safeArea" id="AZO-iW-u4R"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ON9-LP-wQN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fa7-JY-j1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2600" y="-17.119565217391305"/>
+        </scene>
     </scenes>
+    <color key="tintColor" name="AccentColor"/>
     <resources>
         <image name="credit_card" width="150" height="100"/>
         <namedColor name="AccentColor">

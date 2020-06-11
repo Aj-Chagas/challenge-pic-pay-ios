@@ -1,24 +1,19 @@
 //
-//  RegisterCreditCardViewController.swift
+//  RegisterFormViewController.swift
 //  picpaymobile
 //
-//  Created by Anderson Chagas on 10/06/20.
+//  Created by Anderson Chagas on 11/06/20.
 //  Copyright © 2020 Anderson Chagas. All rights reserved.
 //
 
 import UIKit
 
-class RegisterCreditCardViewController: UIViewController {
-    
-    var user : User?
-    
+class RegisterFormViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        navigationItem.setTitleNavigationBar()
+        // Do any additional setup after loading the view.
     }
     
 
