@@ -25,9 +25,12 @@
 		B486B804245BA8270071C10C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B486B803245BA8270071C10C /* Assets.xcassets */; };
 		B486B807245BA8270071C10C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B486B805245BA8270071C10C /* LaunchScreen.storyboard */; };
 		B4F56D06245BB8E100F8EB53 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F56D05245BB8E100F8EB53 /* User.swift */; };
+		E5E70AA092D5BBC903AEAE7A /* Pods_picpaymobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0396FC175726B44A173745 /* Pods_picpaymobile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2124A8F23FF7D7A374D3B694 /* Pods-picpaymobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-picpaymobile.release.xcconfig"; path = "Target Support Files/Pods-picpaymobile/Pods-picpaymobile.release.xcconfig"; sourceTree = "<group>"; };
+		4E0396FC175726B44A173745 /* Pods_picpaymobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_picpaymobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4217B7C24928919004C908F /* UINavigationItemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItemExtension.swift; sourceTree = "<group>"; };
 		B4217B8024929B4A004C908F /* RegisterFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormViewController.swift; sourceTree = "<group>"; };
 		B429901C245C79BE008755F9 /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 		B486B806245BA8270071C10C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B486B808245BA8270071C10C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4F56D05245BB8E100F8EB53 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DD04984FB095579A89A55794 /* Pods-picpaymobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-picpaymobile.debug.xcconfig"; path = "Target Support Files/Pods-picpaymobile/Pods-picpaymobile.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +59,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5E70AA092D5BBC903AEAE7A /* Pods_picpaymobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		162B99BD1839165CFC208F05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E0396FC175726B44A173745 /* Pods_picpaymobile.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B429901B245C7994008755F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +115,8 @@
 			children = (
 				B486B7F9245BA8210071C10C /* picpaymobile */,
 				B486B7F8245BA8210071C10C /* Products */,
+				FDE8EB566343AAEDC9C7A8F9 /* Pods */,
+				162B99BD1839165CFC208F05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +166,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		FDE8EB566343AAEDC9C7A8F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD04984FB095579A89A55794 /* Pods-picpaymobile.debug.xcconfig */,
+				2124A8F23FF7D7A374D3B694 /* Pods-picpaymobile.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B486B80B245BA8270071C10C /* Build configuration list for PBXNativeTarget "picpaymobile" */;
 			buildPhases = (
+				EA1D01B633C9ECA0CAFB3BDF /* [CP] Check Pods Manifest.lock */,
 				B486B7F3245BA8210071C10C /* Sources */,
 				B486B7F4245BA8210071C10C /* Frameworks */,
 				B486B7F5245BA8210071C10C /* Resources */,
+				758484E6FF24CB1629726D72 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,6 +246,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		758484E6FF24CB1629726D72 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-picpaymobile/Pods-picpaymobile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-picpaymobile/Pods-picpaymobile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-picpaymobile/Pods-picpaymobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA1D01B633C9ECA0CAFB3BDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-picpaymobile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B486B7F3245BA8210071C10C /* Sources */ = {
@@ -378,6 +447,7 @@
 		};
 		B486B80C245BA8270071C10C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD04984FB095579A89A55794 /* Pods-picpaymobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +466,7 @@
 		};
 		B486B80D245BA8270071C10C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2124A8F23FF7D7A374D3B694 /* Pods-picpaymobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

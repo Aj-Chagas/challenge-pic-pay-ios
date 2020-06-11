@@ -181,28 +181,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cadastrar Cartão" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wv-fG-hls">
-                                <rect key="frame" x="66" y="64" width="228" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="NotoSansKannada-Bold" family="Noto Sans Kannada" pointSize="28"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Número do cartão" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dWA-vK-59B">
-                                <rect key="frame" x="66" y="143" width="262" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="cdW-04-c8p">
+                                <rect key="frame" x="20" y="40" width="374" height="388"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastrar Cartão" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wv-fG-hls">
+                                        <rect key="frame" x="0.0" y="0.0" width="227.66666666666666" height="38"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKannada-Bold" family="Noto Sans Kannada" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número do cartão " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qGT-gL-uJz">
+                                        <rect key="frame" x="0.0" y="88" width="374" height="34"/>
+                                        <color key="backgroundColor" name="PrimaryColor"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
+                                        <textInputTraits key="textInputTraits" textContentType="cc-number"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do titular" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0JP-qP-Xdn">
+                                        <rect key="frame" x="0.0" y="172" width="374" height="34"/>
+                                        <color key="backgroundColor" name="PrimaryColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zGp-oB-GKr">
+                                        <rect key="frame" x="0.0" y="256" width="374" height="34"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vencimento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="39Z-mC-zCi">
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="34"/>
+                                                <color key="backgroundColor" name="PrimaryColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aRs-cB-qxe">
+                                                <rect key="frame" x="197" y="0.0" width="177" height="34"/>
+                                                <color key="backgroundColor" name="PrimaryColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3C-ug-chT" customClass="RoundButton" customModule="picpaymobile" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="340" width="374" height="48"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="Iwo-xN-3xG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Salvar"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qGT-gL-uJz" firstAttribute="leading" secondItem="cdW-04-c8p" secondAttribute="leading" id="9G8-BG-N3R"/>
+                                    <constraint firstItem="zGp-oB-GKr" firstAttribute="leading" secondItem="cdW-04-c8p" secondAttribute="leading" id="Dw0-PA-jN9"/>
+                                    <constraint firstItem="U3C-ug-chT" firstAttribute="leading" secondItem="cdW-04-c8p" secondAttribute="leading" id="GQE-KR-4Qw"/>
+                                    <constraint firstAttribute="trailing" secondItem="qGT-gL-uJz" secondAttribute="trailing" id="X1P-q8-H5T"/>
+                                    <constraint firstAttribute="trailing" secondItem="zGp-oB-GKr" secondAttribute="trailing" id="ZsW-gH-gs1"/>
+                                    <constraint firstItem="0JP-qP-Xdn" firstAttribute="leading" secondItem="cdW-04-c8p" secondAttribute="leading" id="ese-PK-eiJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="U3C-ug-chT" secondAttribute="trailing" id="ub7-Sr-X8Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="0JP-qP-Xdn" secondAttribute="trailing" id="uwG-CQ-A12"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="PrimaryColor"/>
+                        <constraints>
+                            <constraint firstItem="cdW-04-c8p" firstAttribute="leading" secondItem="AZO-iW-u4R" secondAttribute="leading" constant="20" id="12g-Y0-cZb"/>
+                            <constraint firstItem="cdW-04-c8p" firstAttribute="top" secondItem="AZO-iW-u4R" secondAttribute="top" constant="40" id="Noh-y4-jRe"/>
+                            <constraint firstItem="AZO-iW-u4R" firstAttribute="trailing" secondItem="cdW-04-c8p" secondAttribute="trailing" constant="20" id="nue-2R-Rs9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="AZO-iW-u4R"/>
                     </view>
                     <navigationItem key="navigationItem" id="ON9-LP-wQN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fa7-JY-j1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2600" y="-17.119565217391305"/>
+            <point key="canvasLocation" x="2598.5507246376815" y="-17.119565217391305"/>
         </scene>
     </scenes>
     <color key="tintColor" name="AccentColor"/>
