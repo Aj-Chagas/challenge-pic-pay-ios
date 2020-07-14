@@ -181,7 +181,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1M-QJ-xG8">
+                            <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1M-QJ-xG8">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="cdW-04-c8p">
@@ -261,6 +261,7 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="cdW-04-c8p" secondAttribute="trailing" constant="20" id="6uX-Xa-Bd9"/>
                                     <constraint firstAttribute="bottom" secondItem="cdW-04-c8p" secondAttribute="bottom" id="bXq-Cn-ptw"/>
@@ -280,10 +281,18 @@
                         <viewLayoutGuide key="safeArea" id="AZO-iW-u4R"/>
                     </view>
                     <navigationItem key="navigationItem" id="ON9-LP-wQN"/>
+                    <connections>
+                        <outlet property="CVV" destination="aRs-cB-qxe" id="uks-tm-XPG"/>
+                        <outlet property="cardNumber" destination="qGT-gL-uJz" id="4zK-dy-Ls8"/>
+                        <outlet property="dateDue" destination="39Z-mC-zCi" id="3FR-Vf-HLp"/>
+                        <outlet property="holder" destination="0JP-qP-Xdn" id="30d-F2-z9g"/>
+                        <outlet property="scrollView" destination="u1M-QJ-xG8" id="ORy-TK-2Lb"/>
+                        <outlet property="viewBottomConstraint" destination="ELk-tE-arB" id="yll-gH-BhM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fa7-JY-j1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2598.5507246376815" y="-17.119565217391305"/>
+            <point key="canvasLocation" x="2604" y="-17"/>
         </scene>
     </scenes>
     <color key="tintColor" name="AccentColor"/>

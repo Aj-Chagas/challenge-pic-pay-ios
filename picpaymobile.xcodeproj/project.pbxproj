@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B406E66124BE0044001D0C49 /* keyboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B406E66024BE0044001D0C49 /* keyboardProtocol.swift */; };
 		B4217B7D24928919004C908F /* UINavigationItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4217B7C24928919004C908F /* UINavigationItemExtension.swift */; };
 		B4217B8124929B4A004C908F /* RegisterFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4217B8024929B4A004C908F /* RegisterFormViewController.swift */; };
 		B429901D245C79BE008755F9 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = B429901C245C79BE008755F9 /* users.json */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		2124A8F23FF7D7A374D3B694 /* Pods-picpaymobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-picpaymobile.release.xcconfig"; path = "Target Support Files/Pods-picpaymobile/Pods-picpaymobile.release.xcconfig"; sourceTree = "<group>"; };
 		4E0396FC175726B44A173745 /* Pods_picpaymobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_picpaymobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B406E66024BE0044001D0C49 /* keyboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboardProtocol.swift; sourceTree = "<group>"; };
 		B4217B7C24928919004C908F /* UINavigationItemExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItemExtension.swift; sourceTree = "<group>"; };
 		B4217B8024929B4A004C908F /* RegisterFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormViewController.swift; sourceTree = "<group>"; };
 		B429901C245C79BE008755F9 /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				B4299020245C7FC8008755F9 /* DecodeJson.swift */,
 				B43111F5245DDC6000270C5D /* UIImageView.swift */,
 				B4217B7C24928919004C908F /* UINavigationItemExtension.swift */,
+				B406E66024BE0044001D0C49 /* keyboardProtocol.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -172,7 +175,6 @@
 				DD04984FB095579A89A55794 /* Pods-picpaymobile.debug.xcconfig */,
 				2124A8F23FF7D7A374D3B694 /* Pods-picpaymobile.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -296,6 +298,7 @@
 			files = (
 				B44BDF9324906411004A8C06 /* RoundButton.swift in Sources */,
 				B43111F6245DDC6000270C5D /* UIImageView.swift in Sources */,
+				B406E66124BE0044001D0C49 /* keyboardProtocol.swift in Sources */,
 				B4438D112491C8EB00DDFB21 /* RegisterCreditCardViewController.swift in Sources */,
 				B4217B7D24928919004C908F /* UINavigationItemExtension.swift in Sources */,
 				B4F56D06245BB8E100F8EB53 /* User.swift in Sources */,
