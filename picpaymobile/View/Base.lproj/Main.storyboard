@@ -181,11 +181,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1M-QJ-xG8">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
+                            <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1M-QJ-xG8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="602"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="cdW-04-c8p">
-                                        <rect key="frame" x="20" y="50" width="374" height="388"/>
+                                        <rect key="frame" x="20" y="40" width="374" height="290"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastrar Cartão" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wv-fG-hls">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="38"/>
@@ -242,41 +242,57 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3C-ug-chT" customClass="RoundButton" customModule="picpaymobile" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="340" width="374" height="48"/>
-                                                <color key="backgroundColor" name="AccentColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="48" id="Iwo-xN-3xG"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Salvar"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="cdW-04-c8p" secondAttribute="trailing" constant="20" id="6uX-Xa-Bd9"/>
-                                    <constraint firstAttribute="bottom" secondItem="cdW-04-c8p" secondAttribute="bottom" id="bXq-Cn-ptw"/>
-                                    <constraint firstItem="cdW-04-c8p" firstAttribute="top" secondItem="u1M-QJ-xG8" secondAttribute="top" constant="50" id="eOw-Ox-6Rt"/>
-                                    <constraint firstItem="cdW-04-c8p" firstAttribute="leading" secondItem="u1M-QJ-xG8" secondAttribute="leading" constant="20" id="ph9-gD-gBf"/>
-                                    <constraint firstItem="cdW-04-c8p" firstAttribute="width" secondItem="u1M-QJ-xG8" secondAttribute="width" constant="-40" id="zIG-Sr-Urg"/>
+                                    <constraint firstItem="cdW-04-c8p" firstAttribute="top" secondItem="u1M-QJ-xG8" secondAttribute="top" constant="40" id="2uY-b3-Knf"/>
+                                    <constraint firstAttribute="bottom" secondItem="cdW-04-c8p" secondAttribute="bottom" id="8b1-fk-b47"/>
+                                    <constraint firstAttribute="trailing" secondItem="cdW-04-c8p" secondAttribute="trailing" constant="20" id="UKh-r0-IYO"/>
+                                    <constraint firstItem="cdW-04-c8p" firstAttribute="width" secondItem="u1M-QJ-xG8" secondAttribute="width" constant="-40" id="iDq-gs-P8Y"/>
+                                    <constraint firstItem="cdW-04-c8p" firstAttribute="leading" secondItem="u1M-QJ-xG8" secondAttribute="leading" constant="20" id="vZo-Gl-GNc"/>
                                 </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k5j-Bf-zRh" userLabel="ViewBottom">
+                                <rect key="frame" x="0.0" y="602" width="414" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3C-ug-chT" customClass="RoundButton" customModule="picpaymobile" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="374" height="50"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="bPx-Pk-JOr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Salvar"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="PrimaryColor"/>
+                                <constraints>
+                                    <constraint firstItem="U3C-ug-chT" firstAttribute="leading" secondItem="k5j-Bf-zRh" secondAttribute="leading" constant="20" id="LqL-om-FKP"/>
+                                    <constraint firstAttribute="trailing" secondItem="U3C-ug-chT" secondAttribute="trailing" constant="20" id="cRJ-IU-QZp"/>
+                                    <constraint firstAttribute="bottom" secondItem="U3C-ug-chT" secondAttribute="bottom" constant="20" id="h0A-At-3tr"/>
+                                    <constraint firstItem="U3C-ug-chT" firstAttribute="top" secondItem="k5j-Bf-zRh" secondAttribute="top" constant="20" id="kPp-ob-Rq3"/>
+                                    <constraint firstAttribute="height" constant="90" id="oqr-eF-K6B"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="PrimaryColor"/>
                         <constraints>
-                            <constraint firstItem="u1M-QJ-xG8" firstAttribute="top" secondItem="AZO-iW-u4R" secondAttribute="top" id="7HA-eF-VOs"/>
-                            <constraint firstItem="AZO-iW-u4R" firstAttribute="bottom" secondItem="u1M-QJ-xG8" secondAttribute="bottom" id="ELk-tE-arB"/>
-                            <constraint firstItem="AZO-iW-u4R" firstAttribute="trailing" secondItem="u1M-QJ-xG8" secondAttribute="trailing" id="SwC-Fa-kCC"/>
-                            <constraint firstItem="u1M-QJ-xG8" firstAttribute="leading" secondItem="AZO-iW-u4R" secondAttribute="leading" id="xNc-Nx-MhF"/>
+                            <constraint firstItem="k5j-Bf-zRh" firstAttribute="leading" secondItem="AZO-iW-u4R" secondAttribute="leading" id="51s-KI-1fO"/>
+                            <constraint firstItem="u1M-QJ-xG8" firstAttribute="top" secondItem="AZO-iW-u4R" secondAttribute="top" id="CWt-Rh-ivU"/>
+                            <constraint firstItem="AZO-iW-u4R" firstAttribute="bottom" secondItem="k5j-Bf-zRh" secondAttribute="bottom" id="Kph-VS-Zou"/>
+                            <constraint firstItem="u1M-QJ-xG8" firstAttribute="leading" secondItem="AZO-iW-u4R" secondAttribute="leading" id="Qp4-d7-4Aa"/>
+                            <constraint firstItem="k5j-Bf-zRh" firstAttribute="top" secondItem="u1M-QJ-xG8" secondAttribute="bottom" id="ZyW-Je-KAq"/>
+                            <constraint firstItem="u1M-QJ-xG8" firstAttribute="trailing" secondItem="AZO-iW-u4R" secondAttribute="trailing" id="oAn-tb-h0U"/>
+                            <constraint firstItem="k5j-Bf-zRh" firstAttribute="trailing" secondItem="AZO-iW-u4R" secondAttribute="trailing" id="wVY-YY-CYe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AZO-iW-u4R"/>
                     </view>
@@ -287,12 +303,12 @@
                         <outlet property="dateDue" destination="39Z-mC-zCi" id="3FR-Vf-HLp"/>
                         <outlet property="holder" destination="0JP-qP-Xdn" id="30d-F2-z9g"/>
                         <outlet property="scrollView" destination="u1M-QJ-xG8" id="ORy-TK-2Lb"/>
-                        <outlet property="viewBottomConstraint" destination="ELk-tE-arB" id="yll-gH-BhM"/>
+                        <outlet property="viewBottomConstraint" destination="Kph-VS-Zou" id="tFg-mk-40l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fa7-JY-j1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2604" y="-17"/>
+            <point key="canvasLocation" x="2602.898550724638" y="-17.119565217391305"/>
         </scene>
     </scenes>
     <color key="tintColor" name="AccentColor"/>

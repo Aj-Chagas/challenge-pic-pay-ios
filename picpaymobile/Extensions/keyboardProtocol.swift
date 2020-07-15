@@ -42,33 +42,42 @@ extension KeyboardProtocol where Self: UIViewController {
                                                selector: #selector(keyboardWillShow),
                                                name: UIResponder.keyboardWillShowNotification,
                                                object: nil)
+        NotificationCenter.default.addObserver(self,
+                                                 selector: #selector(keyboardWillHide),
+                                                 name: UIResponder.keyboardWillHideNotification,
+                                                 object: nil)
+        
     }
     
     func unregisterForKeyBoardNotification() {
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillHide),
-                                               name: UIResponder.keyboardWillHideNotification,
+        NotificationCenter.default.removeObserver(self,
+                                               name: UIResponder.keyboardWillShowNotification,
                                                object: nil)
+        
+        NotificationCenter.default.removeObserver(self,
+                                                  name: UIResponder.keyboardWillHideNotification,
+                                                  object: nil)
     }
     
     func ajustViewToShowKeyboard(_ notification: Notification) {
         guard let keyboardFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
         UIView.animate(withDuration: 0.35) {
             self.updateScreenPositionForKeyboard(keyboardFrame)
-            self.scrollView.isScrollEnabled = true
         }
     }
     
     func ajustViewToHideKeyboard(_ notification: Notification, paramConstraint:CGFloat = 0.0) {
        UIView.animate(withDuration: 0.35) {
-           //self.viewBottomConstraint.constant = paramConstraint
-           self.scrollView.contentInset.bottom = paramConstraint
-           self.scrollView.isScrollEnabled = false
+           self.viewBottomConstraint.constant = paramConstraint
+           self.view.layoutIfNeeded()
+           //self.scrollView.contentInset.bottom = paramConstraint
+
        }
     }
     
     private func updateScreenPositionForKeyboard(_ frame: CGRect) {
-        //self.viewBottomConstraint.constant = frame.size.height
-        scrollView.contentInset.bottom = frame.height
+        self.viewBottomConstraint.constant = frame.size.height
+        self.view.layoutIfNeeded()
+        //scrollView.contentInset.bottom = frame.height
     }
 }

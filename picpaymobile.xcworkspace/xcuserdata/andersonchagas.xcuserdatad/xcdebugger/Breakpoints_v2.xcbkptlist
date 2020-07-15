@@ -14,8 +14,8 @@
             filePath = "picpaymobile/Controller/RegisterFormViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -23,16 +23,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2BEF0E54-577A-42AD-8A7A-DCD1352BAF40"
-            shouldBeEnabled = "Yes"
+            uuid = "1BFB0DEC-CF9A-4350-992B-55F2EFB094AA"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "picpaymobile/Controller/RegisterFormViewController.swift"
+            filePath = "picpaymobile/Extensions/keyboardProtocol.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "dismissKeyboard(_:)"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "ajustViewToShowKeyboard(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
