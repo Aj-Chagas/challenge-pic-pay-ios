@@ -11,15 +11,14 @@ import Foundation
 
 class RegisterFormViewController: UIViewController {
     
-    @IBOutlet weak var scrollView: UIScrollView!
-
-    @IBOutlet weak var viewBottomConstraint: NSLayoutConstraint!
+// MARK: - IBOutlet
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var viewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var cardNumber: UITextField!
     @IBOutlet weak var holder: UITextField!
     @IBOutlet weak var dateDue: UITextField!
     @IBOutlet weak var CVV: UITextField!
-    
     
     
     override func viewDidLoad() {
@@ -29,7 +28,7 @@ class RegisterFormViewController: UIViewController {
         dateDue.delegate = self
         CVV.delegate = self
         registerForKeyboardNotification()
-        self.dismissKey()
+        dismissKey()
     }
     
     deinit {
@@ -39,19 +38,7 @@ class RegisterFormViewController: UIViewController {
     
 }
 
-extension UIViewController {
-    func dismissKey()
-    {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(UIViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    @objc func dismissKeyboard()
-    {
-        view.endEditing(true)
-    
-    }
-}
+  // MARK: - Extension KeyboardProtocol
 
 extension RegisterFormViewController : KeyboardProtocol {
     
@@ -64,7 +51,13 @@ extension RegisterFormViewController : KeyboardProtocol {
         scrollView.contentInset = UIEdgeInsets.zero
     }
     
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
 }
+
+// MARK: - Extension UITextFieldDelegate
 
 extension RegisterFormViewController : UITextFieldDelegate {
     

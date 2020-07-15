@@ -22,6 +22,7 @@ import UIKit
     @objc
     func keyboardWillHide(_ notification: Notification)
     
+    @objc func dismissKeyboard()
 }
 
 
@@ -46,7 +47,6 @@ extension KeyboardProtocol where Self: UIViewController {
                                                  selector: #selector(keyboardWillHide),
                                                  name: UIResponder.keyboardWillHideNotification,
                                                  object: nil)
-        
     }
     
     func unregisterForKeyBoardNotification() {
@@ -67,8 +67,9 @@ extension KeyboardProtocol where Self: UIViewController {
     }
     
     func ajustViewToHideKeyboard(_ notification: Notification, paramConstraint:CGFloat = 0.0) {
+        
        UIView.animate(withDuration: 0.35) {
-           self.viewBottomConstraint.constant = paramConstraint
+        self.viewBottomConstraint.constant = self.setSafeAreaBottomConstraint()
            self.view.layoutIfNeeded()
            //self.scrollView.contentInset.bottom = paramConstraint
 
@@ -80,4 +81,27 @@ extension KeyboardProtocol where Self: UIViewController {
         self.view.layoutIfNeeded()
         //scrollView.contentInset.bottom = frame.height
     }
+    
+    func dismissKey()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func setSafeAreaBottomConstraint(minusSafeArea : CGFloat = 0) -> CGFloat {
+         if #available(iOS 11.0, *) {
+             let window = UIApplication.shared.connectedScenes
+                 .filter({$0.activationState == .foregroundActive})
+                 .map({$0 as? UIWindowScene})
+                 .compactMap({$0})
+                 .first?.windows
+                 .filter({$0.isKeyWindow}).first
+             
+             if let safeAreaBottom = window?.safeAreaInsets.bottom {
+                 return safeAreaBottom - minusSafeArea
+             }
+         }
+         return minusSafeArea
+     }
 }
